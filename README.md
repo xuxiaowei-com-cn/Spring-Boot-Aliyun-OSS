@@ -31,3 +31,8 @@ Spring Boot 阿里云 OSS。
 - Template
 	- Thymeleaf                 Thymeleaf模板引擎（页面）
     
+## 其他依赖（创建项目时不可选）
+
+- 阿里云 OSS
+
+    - aliyun sdk oss            阿里云OSS

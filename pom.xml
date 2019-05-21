@@ -16,9 +16,34 @@
 
     <properties>
         <java.version>1.8</java.version>
+
+
+        <!-- 阿里云 OSS -->
+        <!-- https://mvnrepository.com/artifact/com.aliyun.oss/aliyun-sdk-oss -->
+        <!-- 2019年3月8日 -->
+        <!-- GitHub地址：https://github.com/aliyun/aliyun-oss-java-sdk -->
+        <!-- 示例地址：https://github.com/aliyun/aliyun-oss-java-sdk/tree/master/src/samples -->
+        <aliyun-sdk-oss.version>3.4.2</aliyun-sdk-oss.version>
+
+
     </properties>
 
     <dependencies>
+
+
+        <!-- 阿里云 OSS -->
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>${aliyun-sdk-oss.version}</version>
+        </dependency>
+
+
+        <!-- 以上为项目自定义依赖 -->
+
+
+        <!-- 以下为创建 Spring Boot 时的依赖 -->
+
 
         <!-- - Thymeleaf -->
         <dependency>
