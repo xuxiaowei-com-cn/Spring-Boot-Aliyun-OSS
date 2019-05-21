@@ -36,3 +36,5 @@ Spring Boot 阿里云 OSS。
 - 阿里云 OSS
 
     - aliyun sdk oss            阿里云OSS
+    
+    - json lib                  阿里云 json-lib 依赖
