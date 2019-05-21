@@ -24,3 +24,9 @@ aliyun:
     dir:
     # 回调服务器地址
     callback-url:
+#
+# 日志 配置
+logging:
+  level:
+    web: debug
+    cn.com.xuxiaowei: debug
