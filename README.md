@@ -35,6 +35,12 @@ Spring Boot 阿里云 OSS。
 
 - 阿里云 OSS
 
-    - aliyun sdk oss            阿里云OSS
+    - aliyun-sdk-oss            阿里云OSS
     
-    - json lib                  阿里云 json-lib 依赖
+    - json-lib                  阿里云OSS所需依赖
+    
+    - commons-beanutils         阿里云OSS所需依赖
+    
+    - commons-collections       阿里云OSS所需依赖
+    
+    - ezmorph                   阿里云OSS所需依赖
