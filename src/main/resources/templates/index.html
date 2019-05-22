@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <title>OSS web直传</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
@@ -46,6 +46,6 @@
 <p>&nbsp;</p>
 
 </body>
-<script type="text/javascript" src="plupload-2.1.2/js/plupload.full.min.js"></script>
-<script type="text/javascript" src="upload.js"></script>
+<script type="text/javascript" th:src="@{/plupload-2.1.2/js/plupload.full.min.js}"></script>
+<script type="text/javascript" th:src="@{/upload.js}"></script>
 </html>
