@@ -88,10 +88,11 @@ Spring Boot 阿里云 OSS。
 
     - aliyun-sdk-oss            阿里云OSS
     
-    - json-lib                  阿里云OSS所需依赖，Maven库中不存在，请使用 sources 文件夹中的 json-lib-2.4-jdk15.jar
+    - json-lib                  阿里云OSS所需依赖，Maven库中不存在，请使用 sources 文件夹中的 json-lib-2.4-jdk15.jar，
+                                net.sf.json.JSONObject
     
-    - commons-beanutils         阿里云OSS所需依赖
+    - commons-beanutils         阿里云OSS所需依赖，java.lang.NoClassDefFoundError: org/apache/commons/beanutils/DynaBean
     
-    - commons-collections       阿里云OSS所需依赖
+    - commons-collections       阿里云OSS所需依赖，java.lang.ClassNotFoundException: org.apache.commons.collections.map.ListOrderedMap
     
-    - ezmorph                   阿里云OSS所需依赖
+    - ezmorph                   阿里云OSS所需依赖，java.lang.ClassNotFoundException: net.sf.ezmorph.MorpherRegistry
