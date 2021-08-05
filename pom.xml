@@ -44,7 +44,7 @@
         <!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
         <!-- 2016年9月21日 -->
         <!-- java.lang.NoClassDefFoundError: org/apache/commons/beanutils/DynaBean -->
-        <commons-beanutils.version>1.9.3</commons-beanutils.version>
+        <commons-beanutils.version>1.9.4</commons-beanutils.version>
 
 
     </properties>
