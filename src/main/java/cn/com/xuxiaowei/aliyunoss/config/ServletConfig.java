@@ -6,6 +6,8 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import javax.servlet.http.HttpServlet;
+
 /**
  * Servlet 配置
  *
@@ -26,7 +28,7 @@ public class ServletConfig {
      * 阿里云应用服务器（阿里云签名服务器）
      */
     @Bean
-    ServletRegistrationBean aliyunOssSignatureServerHttpServlet() {
+    public ServletRegistrationBean<HttpServlet> aliyunOssSignatureServerHttpServlet() {
         return new ServletRegistrationBean<>(aliyunOssSignatureServerHttpServletBean(), "/aliyun/oss/signature");
     }
 
@@ -34,7 +36,7 @@ public class ServletConfig {
      * 阿里云回调服务器
      */
     @Bean
-    ServletRegistrationBean aliyunOssSignatureCallbackHttpServlet() {
+    public ServletRegistrationBean<HttpServlet> aliyunOssSignatureCallbackHttpServlet() {
         return new ServletRegistrationBean<>(new SignatureCallbackHttpServlet(), "/aliyun/oss/callback");
     }
 
