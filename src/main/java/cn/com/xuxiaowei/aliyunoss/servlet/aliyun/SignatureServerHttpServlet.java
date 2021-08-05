@@ -119,7 +119,7 @@ public class SignatureServerHttpServlet extends HttpServlet {
 
         String ossCallbackBody = getPostBody(req.getInputStream(),
                 Integer.parseInt(req.getHeader("content-length")));
-        boolean ret = verifyOSSCallbackRequest(req, ossCallbackBody);
+        boolean ret = verifyOssCallbackRequest(req, ossCallbackBody);
         System.out.println("verify result : " + ret);
 
         if (ret) {
@@ -210,7 +210,7 @@ public class SignatureServerHttpServlet extends HttpServlet {
     /**
      * 验证上传回调的Request
      */
-    private boolean verifyOSSCallbackRequest(HttpServletRequest request, String ossCallbackBody)
+    private boolean verifyOssCallbackRequest(HttpServletRequest request, String ossCallbackBody)
             throws NumberFormatException, IOException {
         boolean ret;
         String autorizationInput = request.getHeader("Authorization");
