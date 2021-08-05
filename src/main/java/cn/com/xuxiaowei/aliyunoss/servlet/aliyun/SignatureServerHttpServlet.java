@@ -91,8 +91,8 @@ public class SignatureServerHttpServlet extends HttpServlet {
             respMap.put("expire", String.valueOf(expireEndTime / 1000));
 
             JSONObject jasonCallback = new JSONObject();
-            // 注意：此处的 CallbackUrl 首字母必须大写（官方项目示例是小写，错误）
-            jasonCallback.put("CallbackUrl", callbackUrl);
+
+            jasonCallback.put("callbackUrl", callbackUrl);
             jasonCallback.put("callbackBody",
                     "filename=${object}&size=${size}&mimeType=${mimeType}&height=${imageInfo.height}&width=${imageInfo.width}");
             jasonCallback.put("callbackBodyType", "application/x-www-form-urlencoded");
