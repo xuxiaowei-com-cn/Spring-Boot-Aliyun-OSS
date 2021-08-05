@@ -18,12 +18,18 @@ public class SignatureCallbackHttpServlet extends HttpServlet {
 
         System.err.println("回调服务器GET");
 
+        resp.getWriter().println("{\"Status\":\"OK\",\"method\":\"GET\"}");
+        resp.flushBuffer();
+
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         System.err.println("回调服务器POST");
+
+        resp.getWriter().println("{\"Status\":\"OK\",\"method\":\"POST\"}");
+        resp.flushBuffer();
 
     }
 }
