@@ -20,7 +20,7 @@ public class ServletConfig {
      * 阿里云应用服务器（阿里云签名服务器） 注册为 Bean
      */
     @Bean
-    SignatureServerHttpServlet aliyunOssSignatureServerHttpServletBean() {
+    public SignatureServerHttpServlet aliyunOssSignatureServerHttpServletBean() {
         return new SignatureServerHttpServlet();
     }
 
