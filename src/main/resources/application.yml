@@ -20,7 +20,7 @@ aliyun:
     endpoint:
     # Bucket 域名（不含EndPoint（地域节点））
     bucket:
-    # 上传地址前缀
+    # 上传地址前缀（不可使用/开头）
     dir:
     # 回调服务器地址
     callback-url:
