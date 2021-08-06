@@ -6,8 +6,8 @@ import com.aliyun.oss.OSSClientBuilder;
 import com.aliyun.oss.common.utils.BinaryUtil;
 import com.aliyun.oss.model.MatchMode;
 import com.aliyun.oss.model.PolicyConditions;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
-import net.sf.json.JSONObject;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -31,6 +31,7 @@ import java.security.PublicKey;
 import java.security.spec.X509EncodedKeySpec;
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -90,20 +91,24 @@ public class SignatureServerHttpServlet extends HttpServlet {
             respMap.put("host", host);
             respMap.put("expire", String.valueOf(expireEndTime / 1000));
 
-            JSONObject jasonCallback = new JSONObject();
+            Map<String, String> jasonCallback = new HashMap<>(8);
 
             jasonCallback.put("callbackUrl", callbackUrl);
             jasonCallback.put("callbackBody",
                     "filename=${object}&size=${size}&mimeType=${mimeType}&height=${imageInfo.height}&width=${imageInfo.width}");
             jasonCallback.put("callbackBodyType", "application/x-www-form-urlencoded");
-            String base64CallbackBody = BinaryUtil.toBase64String(jasonCallback.toString().getBytes());
+
+            ObjectMapper objectMapper = new ObjectMapper();
+            String jasonCallbackStr = objectMapper.writeValueAsString(jasonCallback);
+
+            String base64CallbackBody = BinaryUtil.toBase64String(jasonCallbackStr.getBytes());
             respMap.put("callback", base64CallbackBody);
 
-            JSONObject ja1 = JSONObject.fromObject(respMap);
+            String ja1 = objectMapper.writeValueAsString(respMap);
 
             resp.setHeader("Access-Control-Allow-Origin", "*");
             resp.setHeader("Access-Control-Allow-Methods", "GET, POST");
-            response(req, resp, ja1.toString());
+            response(req, resp, ja1);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());

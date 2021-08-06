@@ -60,11 +60,11 @@
         </dependency>
 
         <!-- 阿里云 json-lib 依赖 -->
-        <dependency>
+        <!--<dependency>
             <groupId>net.sf.json-lib</groupId>
             <artifactId>json-lib</artifactId>
             <version>${json-lib.version}</version>
-        </dependency>
+        </dependency>-->
 
         <!-- 阿里云 commons-collections 依赖 -->
         <dependency>
