@@ -23,7 +23,7 @@
         <!-- 2019年3月8日 -->
         <!-- GitHub地址：https://github.com/aliyun/aliyun-oss-java-sdk -->
         <!-- 示例地址：https://github.com/aliyun/aliyun-oss-java-sdk/tree/master/src/samples -->
-        <aliyun-sdk-oss.version>3.4.2</aliyun-sdk-oss.version>
+        <aliyun-sdk-oss.version>3.13.0</aliyun-sdk-oss.version>
 
         <!-- 阿里云 json-lib 依赖 -->
         <json-lib.version>2.4-jdk15</json-lib.version>
